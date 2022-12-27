@@ -48,13 +48,13 @@ body {
   width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid red;
   margin: 0 auto;
 }
 .nav-wrap {
   display: flex;
   align-items: center;
   margin-right: auto;
+  gap: 76px;
 }
 .header-nav {
   display: flex;
@@ -80,8 +80,6 @@ body {
   align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding-left: 156px;
-  margin-right: 76px;
 }
 .logo-black {
   color: var(--first-text-color);
@@ -119,11 +117,14 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+.portfilio-section {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
 .filter-list {
   display: flex;
   gap: 24px;
   justify-content: center;
-  padding-top: 96px;
   margin-bottom: 84px;
 }
 
@@ -133,14 +134,14 @@ body {
   column-gap: 24px;
   row-gap: 42px;
   justify-content: center;
-  padding-bottom: 120px;
 }
 .portfolio-item {
   width: calc((100 - 48px) / 3);
 }
-.portfolio-title {
-  margin-top: 32px;
-  margin-bottom: 8px;
+.portfolio-description {
+  padding: 32px 16px;
+  border: 1px solid #E7E9FC;
+  border-top: none;
 }
 .filter-btn {
   font-family: inherit;
@@ -153,6 +154,11 @@ body {
   color: var(--text-btn-color);
   background: var(--btn-fon-color);
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  border: none;
+  padding: 12px 24px;
 }
 
 .filter-btn:hover,
@@ -163,9 +169,11 @@ body {
 
 .portfolio-title {
   font-size: 20px;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--first-text-color);
+  margin-bottom: 8px;
 }
 .portfolio-after-title {
   font-weight: 400;
@@ -176,8 +184,12 @@ body {
 }
 /* ---------FOOTER------------ */
 
-.logo.footer {
+.footer > .container {
   padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.logo.footer {
   margin-bottom: 16px;
 }
 .logo-white {
@@ -192,9 +204,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--footer-text);
-  padding-left: 156px;
-  padding-bottom: 100px;
-  max-width: 420px;
+  max-width: 264px;
 }
 
 /* ---------------index.html------------------ */
@@ -236,6 +246,8 @@ body {
   height: 56px;
   display: block;
   margin: 0 auto;
+  border: none;
+  border-radius: 4px;
 }
 
 .hero-btn:hover,
@@ -245,9 +257,11 @@ body {
 /* --------------ACTIVITY------------------- */
 .activity,
 .foto {
-  background-color: var(--first-background-color);
+  background-color: #fff;
 }
-
+.foto {
+  padding-bottom: 120px;
+}
 .activity {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -258,6 +272,7 @@ body {
   justify-content: center;
 }
 .activity-item-title {
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -269,17 +284,20 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--second-text-color);
-  width: 265px;
+  width: 264px;
+  margin-top: 8px;
 }
 .activity-item + .activity-item {
   margin-right: 24px;
+}
+.activity-item:last-child {
+  margin-right: 0;
 }
 .team-members {
   background-color: var(--btn-fon-color);
 }
 .foto-item {
   width: calc((100 - 48px) / 3);
-  padding-bottom: 120px;
 }
 .foto-title {
   margin-bottom: 72px;
@@ -292,17 +310,25 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--first-text-color);
-  padding-top: 120px;
   margin-bottom: 72px;
+}
+.team-members {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.team-description {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .team-members-item {
   width: calc((100-72px) / 4);
+  background-color: #fff;
 }
 
 .team-members-list {
   display: flex;
   gap: 24px;
-  padding-bottom: 120px;
   justify-content: center;
 }
 
@@ -317,7 +343,6 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--first-text-color);
-  margin-top: 32px;
   margin-bottom: 8px;
 }
 
